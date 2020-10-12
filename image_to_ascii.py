@@ -16,7 +16,7 @@ class CharacterSets:
     basic = ' .-:=+*#%@'
     black_and_white = ' #'
     black_grey_and_white = ' +#'
-    full = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`\'. '
+    full = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`. '
 
 class ascii_image:
     def __init__(self, image_dir, image_size, **kwargs):
@@ -67,12 +67,6 @@ class ascii_image:
     def display(self):
         system('cls')
         print(self.text_image)
-
-class ascii_image_sequence:
-    def __init__(self):
-        pass
-
-
 
 
 
