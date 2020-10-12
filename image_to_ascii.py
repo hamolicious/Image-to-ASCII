@@ -1,5 +1,5 @@
 from cv2 import imread
-from os import system, path
+from os import system
 
 def map_to_range(value, leftMin, leftMax, rightMin, rightMax):
     # Figure out how 'wide' each range is
@@ -32,15 +32,10 @@ class ascii_image:
         self.precompute()
 
     def load_image(self, image_dir):
-        if not type(image_dir) is str:
-            raise TypeError('Directory must be a string')
-        if not path.isfile(image_dir):
-            raise TypeError('Path must refer to an image not a directory')
+        if not type(image_dir) is str : raise TypeError('Directory must be a string')
 
         image = imread(image_dir)
-
-        if image is None:
-            raise TypeError('Unsuported Image format')
+        if image is None : raise TypeError('Something went wrong')
     
         return image
 
